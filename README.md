@@ -15,3 +15,6 @@ make
 ## Requisitos
 * Ordenar em ordem alfabética lista de nomes dados com base no nome e seu número ordinal.
 * Utilizar C++, C# ou Java
+
+## Complexidade assintótica
+O(n²)

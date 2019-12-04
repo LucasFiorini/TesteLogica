@@ -12,7 +12,7 @@ build/main: $(OBJECT_FILES)
 	g++ -g $^ -std=c++11 -o $@
 
 %.o: %.cpp
-	g++ -g -std=c++11 -c $^ -o $@
+	g++ -g -std=c++11 -O3 -c $^ -o $@
 
 clean_objects: $(OBJECT_FILES)
 	rm $^

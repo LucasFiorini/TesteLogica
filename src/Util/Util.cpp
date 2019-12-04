@@ -10,6 +10,7 @@ string* Util::split(string s) {
     string* arr = new string[2];
     stringstream X(s);
     unsigned int i = 0;
+    //iterate through the string and storing each part into the array
     while (getline(X,arr[i], ' ')) {
         i++;
     }
@@ -47,7 +48,7 @@ unsigned int Util::romanToDecimal(string roman) {
 }
 
 void Util::printArray(string array[], unsigned int size) {
-    cout << "Returns: {";
+    cout << "{";
     for (size_t i = 0; i < size; i++) {
         if (i+1 == size) {
             cout << "\"" << array[i] << "\"" << "}";

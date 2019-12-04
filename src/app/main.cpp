@@ -9,11 +9,19 @@ using namespace std;
 
 int main() {
     KingSort* k = new KingSort;
-    string kings[] = {"Carlos XXX", "Carlos I", "Lucas XI", "Lucas XX"};
+
+    string kings[] = {"Philippe II", "Philip II"};
+
+
     unsigned int size = sizeof(kings) / sizeof(*kings);
-    k->getSortedList(kings, size);
+    if (kings[0] == "") {
+        cerr << "Empty name string!" << endl;
+        exit(EXIT_FAILURE);
+    } else {
+        k->getSortedList(kings, size);
+        Util::printArray(kings, size);
+    }
 
-    Util::printArray(kings, size);
-
+    delete k;
     return 0;
 }
